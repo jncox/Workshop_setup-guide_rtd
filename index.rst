@@ -14,6 +14,5 @@ Info needed for an SE to setup a HPOC environment for a workshop.
    :glob:
 
    prism_element
-   prism_element
+   prism_central
    active_directory
-   
