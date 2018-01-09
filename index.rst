@@ -1,5 +1,5 @@
 .. Nutanix Workshop Setup Guide documentation master file, created by
-   sphinx-quickstart on Tue Jan  9 06:30:29 2018.
+   sphinx-quickstart on Tue Jan  9 07:03:54 2018.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
