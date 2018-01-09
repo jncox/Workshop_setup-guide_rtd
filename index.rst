@@ -1,20 +1,50 @@
-.. Nutanix Workshop Setup Guide documentation master file, created by
-   sphinx-quickstart on Tue Jan  9 07:03:54 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. .. only:: html
 
-Welcome to Nutanix Workshop Setup Guide's documentation!
-========================================================
+********************************
+**Nutanix Workshop Setup Guide**
+********************************
+
+Info needed for an SE to setup a HPOC environment for a workshop.
+
+.. The documentation hosted on this site is divided into two main categories:
+
+.. contents::
+
+
+.. The documentation hosted on this site is divided into three main categories:
+
+.. * :ref:`PrismElement`
+.. * :ref:`PrismCentral`
+.. * :ref:`ActiveDirectory`
+
+.. _PrismElement:
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+  :maxdepth: 2
+  :caption:     Prism Element
+  :name: _PrismElement
+
+  .. prism_element
+  prism_element/prism_element_setup
 
 
+.. _PrismCentral:
 
-Indices and tables
-==================
+.. toctree::
+  :maxdepth: 2
+  :caption:     Prism Central
+  :name: _PrismCentral
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+  .. prism_central
+  prism_element/prism_central_setup
+
+
+  .. _ActiveDirectory:
+
+  .. toctree::
+    :maxdepth: 2
+    :caption:     Active Directory
+    :name: _ActiveDirectory
+
+    .. active_directory
+    active_directory/active_directory_setup
