@@ -174,7 +174,7 @@ add-users.ps1_ and add-users.csv_
 	$GroupName = "Bootcamp Users"
 	$OU = "CN=Users, DC=BOOTCAMP,DC=LOCAL"
 
-	NEW-ADGroup -name $GroupName –GroupScope Global
+	NEW-ADGroup -name $GroupName -GroupScope Global
 
 	ForEach($User in $Users){
 	$User.FirstName = $User.FirstName.substring(0,1).toupper()+$User.FirstName.substring(1).tolower()
