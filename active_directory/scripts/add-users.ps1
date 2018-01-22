@@ -14,7 +14,7 @@ $LogFolder = "c:\scripts\logs"
 $GroupName = "Bootcamp Users"
 $OU = "CN=Users, DC=BOOTCAMP,DC=LOCAL"
 
-NEW-ADGroup -name $GroupName –GroupScope Global
+NEW-ADGroup -name $GroupName -GroupScope Global
 
 ForEach($User in $Users)
 {
