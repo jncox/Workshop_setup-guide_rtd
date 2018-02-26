@@ -18,7 +18,7 @@ Open a Shell on your laptop, and navigate to the unzipped xtract directory.
 
 Run **"ls -l"**, and you will see the 3 different cli options
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm02.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm02.png
 
 You will launch the utility for your OS (Windows or OS X), and point to your teams HPOC
 
@@ -27,7 +27,7 @@ You will launch the utility for your OS (Windows or OS X), and point to your tea
 
 Next you will be promted to enter the **admin** Password
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm03.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm03.png
 
 Now you can deploy the **Xtract** VM.
 
@@ -45,21 +45,21 @@ For this exercise we will use a static IP, you will need this information:
   .. code-block:: bash
   deploy-vm vm-container CONTAINER-NAME vm-network Primary ip-address 10.21.XX.42 netmask 255.255.255.128 gateway 10.21.XX.1 dns1 10.21.253.10 dns2 10.21.253.11 searchdomains nutanixdc.local
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm04.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm04.png
 
 When it completes it will open a browser window to the **Xtract for VMs** Dashboard
 
 Accept the EULA, and click **Continue**
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm05.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm05.png
 
 Click **OK** on the **Nutanix Customer Experience Program**
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm06.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm06.png
 
 Set **Password** to "nutanix/ru"
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm07.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm07.png
 
 Login with the following credentials:
 
@@ -71,7 +71,7 @@ Deploy Xtract for VMs from Prism
 
 In **Prism > VM**, click **VM**, then click **Table**
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm01.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm01.png
 
 Click **+ Create VM**
 
@@ -120,15 +120,15 @@ When it completes it will open a browser window to the **Xtract for VMs** Dashbo
 
 Accept the EULA, and click **Continue**
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm05.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm05.png
 
 Click **OK** on the **Nutanix Customer Experience Program**
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm06.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm06.png
 
 Set **Password** to "nutanix/ru"
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm07.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm07.png
 
 Login with the following credentials:
 
@@ -145,7 +145,7 @@ Configure **Source** and **Targets** environements
 
 In **Xtract **, click **+ Add Source Environment**
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm08.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm08.png
 
 Fill out the following fields and click **Add**:
 
@@ -154,11 +154,11 @@ Fill out the following fields and click **Add**:
 - **User Name** - administrator@vsphere.local
 - **Passwrod** - techX2018!
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm09.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm09.png
 
 In **Xtract **, click **+ Add Source Environment**
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm08.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm08.png
 
 Fill out the following fields and click **Add**:
 
@@ -167,35 +167,35 @@ Fill out the following fields and click **Add**:
 - **User Name** - admin
 - **Passwrod** - techX2018!
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm10.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm10.png
 
 Now you should have **Source** and **Target** environments condfigured
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm11.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm11.png
 
 Create a Migration Plan
 .................
 
 In **Xtract **, click **Create a Migration Plan**
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm12.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm12.png
 
 Enter Migration Plan Name, and click **OK**:
 
 - **Migration Plan Name** - View-Win10-GoldenImage Migration
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm13.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm13.png
 
 Enter Migration Plan Name, and click **Next**:
 
 - **Select Target** - POCXXX
 - **Target Container** - CONTAINER-NAME
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm14.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm14.png
 
 Select **View-Win10-GoldenImage** VM, and click **Next**
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm15.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm15.png
 
 Fill out the following fields and click **Next**:
 
@@ -204,15 +204,15 @@ Fill out the following fields and click **Next**:
 - **Password** - nutanix/4u
 - **Target Network** - Primary
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm16.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm16.png
 
 Click **Save and Start**
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm17.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm17.png
 
 Now you can watch the Migration process in the dashboard
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm18.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm18.png
 
 Once the migration completes, you can **Perform Cutover Operation**
 
@@ -221,21 +221,21 @@ Perform Cutover Operation
 
 In **Xtract **, click **Migration In Progress**
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm19.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm19.png
 
 Check the box for **View-Win10-GoldenImage**, and click **Cutover**
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm20.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm20.png
 
 Click **Continue**
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm21.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm21.png
 
 After it is completed you can view it in Prism
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm22.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm22.png
 
-.. figure:: http://s3.nutanixtechsummit.com/xtract-vm/xtractvm23.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm23.png
 
 Conclusions
 +++++++++++
