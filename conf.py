@@ -33,8 +33,8 @@ import sys
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 #extensions = ['sphinx.ext.todo',
-    'sphinx.ext.ifconfig',
-    'sphinxcontrib.fulltoc',
+#    'sphinx.ext.ifconfig',
+#    'sphinxcontrib.fulltoc',
     'sphinx_fontawesome']
 
 # Add any paths that contain templates here, relative to this directory.
