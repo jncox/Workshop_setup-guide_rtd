@@ -1,5 +1,5 @@
 -------------------
-Xtract
+Xtract for VMs
 -------------------
 
 Overview
