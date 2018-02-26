@@ -1,18 +1,28 @@
-.. .. only:: html
+.. raw:: html
+  :file: jumbotron.html
 
-****************************
-Nutanix Workshop Setup Guide
-****************************
+.. title:: Nutanix Workshops
 
-Info needed for an SE to setup a HPOC environment for a workshop.
-
-.. The documentation hosted on this site is divided into two main categories:
-
+.. _intro-docs:
 
 .. toctree::
-   :maxdepth: 2
-   :glob:
+  :maxdepth: 2
+  :caption:     Introduction
+  :name: _intro-docs
+  :hidden:
 
-   prism_element
-   prism_central
-   active_directory
+  getstarted
+  templates/index
+  setup/index
+
+.. _lab-docs:
+
+.. toctree::
+  :maxdepth: 2
+  :caption:     Workshops
+  :name: _lab-docs
+  :hidden:
+
+  calm/index
+  vdi_ahv/index
+..  example/index

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
-# Nutanix Workshop Setup Guide documentation build configuration file, created by
-# sphinx-quickstart on Tue Jan  9 07:03:54 2018.
+# Nutanix Labs documentation build configuration file, created by
+# sphinx-quickstart on Fri Oct 27 12:18:41 2017.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -16,9 +16,11 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+import sphinx_bootstrap_theme
+import sphinx_fontawesome
+#sys.path.insert(0, os.path.abspath('..'))
 
 
 # -- General configuration ------------------------------------------------
@@ -30,7 +32,10 @@
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autodoc']
+extensions = ['sphinx.ext.todo',
+    'sphinx.ext.ifconfig',
+    'sphinxcontrib.fulltoc',
+    'sphinx_fontawesome']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -45,8 +50,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Nutanix Workshop Setup Guide'
-copyright = u'2018, Nutanix Global Technical Enablement'
+project = u'Nutanix Workshops'
+copyright = u'2017 Nutanix'
 author = u'Nutanix Global Technical Enablement'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -74,7 +79,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 pygments_style = 'sphinx'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = False
+todo_include_todos = True
 
 
 # -- Options for HTML output ----------------------------------------------
@@ -82,13 +87,98 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'default'
+#html_theme = "sphinx_rtd_theme"
+html_theme = 'bootstrap'
+html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+
+# (Optional) Logo. Should be small enough to fit the navbar (ideally 24x24).
+# Path should be relative to the ``_static`` files directory.
+html_logo = "NutanixWorkshops.svg"
+
+html_favicon = "favicon.ico"
+
+html_title = ""
+
+html_show_sphinx = False
+
+#html_add_permalinks = ""
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
 # html_theme_options = {}
+# Theme options are theme-specific and customize the look and feel of a
+# theme further.
+html_theme_options = {
+
+}
+
+html_theme_options = {
+    # Navigation bar title. (Default: ``project`` value)
+    'navbar_title': " ",
+
+    # Tab name for entire site. (Default: "Site")
+    'navbar_site_name': "",
+
+    # A list of tuples containing pages or urls to link to.
+    # Valid tuples should be in the following forms:
+    #    (name, page)                 # a link to a page
+    #    (name, "/aa/bb", 1)          # a link to an arbitrary relative url
+    #    (name, "http://example.com", True) # arbitrary absolute url
+    # Note the "1" or "True" value above as the third argument to indicate
+    # an arbitrary url.
+    #'navbar_links': [
+    #    ("Examples", "examples"),
+    #    ("Link", "http://example.com", True),
+    #],
+
+    # Render the next and previous page links in navbar. (Default: true)
+    'navbar_sidebarrel': False,
+
+    # Render the current pages TOC in the navbar. (Default: true)
+    'navbar_pagenav': False,
+
+    # Tab name for the current pages TOC. (Default: "Page")
+    'navbar_pagenav_name': "Page",
+
+    # Global TOC depth for "site" navbar tab. (Default: 1)
+    # Switching to -1 shows all levels.
+    'globaltoc_depth': 2,
+
+    # Include hidden TOCs in Site navbar?
+    #
+    # Note: If this is "false", you cannot have mixed ``:hidden:`` and
+    # non-hidden ``toctree`` directives in the same page, or else the build
+    # will break.
+    #
+    # Values: "true" (default) or "false"
+    'globaltoc_includehidden': "true",
+
+    # HTML navbar class (Default: "navbar") to attach to <div> element.
+    # For black navbar, do "navbar navbar-inverse"
+    'navbar_class': "navbar-inverse",
+
+    # Fix navigation bar to top of page?
+    # Values: "true" (default) or "false"
+    'navbar_fixed_top': "false",
+
+    # Location of link to source.
+    # Options are "nav" (default), "footer" or anything else to exclude.
+    'source_link_position': "footer",
+
+    # Bootswatch (http://bootswatch.com/) theme.
+    #
+    # Options are nothing (default) or the name of a valid theme
+    # such as "cosmo" or "sandstone".
+    #'bootswatch_theme': "united",
+
+    # Choose Bootstrap version.
+    # Values: "3" (default) or "2" (in quotes)
+    'bootstrap_version': "3",
+}
+
+html_sidebars = {'calm/**': ['localtoc.html'],'intro/**': ['localtoc.html'],'templates/**': ['localtoc.html'],'setup/**': ['localtoc.html'],'vdi_ahv/**': ['localtoc.html'],'example/**': ['localtoc.html']}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -100,14 +190,25 @@ html_static_path = ['_static']
 #
 # This is required for the alabaster theme
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
-html_sidebars = {}
-    
+#html_sidebars = {
+#    '**': [
+#        'relations.html',  # needs 'show_related': True theme option to display
+#        'searchbox.html',
+#    ]
+#}
+
+# Override default css to get a larger width for ReadTheDoc build
+#html_context = {
+#    'css_files': [
+#        '_static/css/theme.css',
+#    ],
+#}
 
 
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'NutanixWorkshopSetupGuidedoc'
+#htmlhelp_basename = 'NutanixLabsdoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -134,7 +235,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'NutanixWorkshopSetupGuide.tex', u'Nutanix Workshop Setup Guide Documentation',
+    (master_doc, 'NutanixLabs.tex', u'Nutanix Labs Documentation',
      u'Nutanix Global Technical Enablement', 'manual'),
 ]
 
@@ -144,7 +245,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'nutanixworkshopsetupguide', u'Nutanix Workshop Setup Guide Documentation',
+    (master_doc, 'nutanixlabs', u'Nutanix Labs Documentation',
      [author], 1)
 ]
 
@@ -155,29 +256,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'NutanixWorkshopSetupGuide', u'Nutanix Workshop Setup Guide Documentation',
-     author, 'NutanixWorkshopSetupGuide', 'One line description of project.',
+    (master_doc, 'NutanixLabs', u'Nutanix Labs Documentation',
+     author, 'NutanixLabs', 'One line description of project.',
      'Miscellaneous'),
 ]
-
-
-
-# -- Options for Epub output ----------------------------------------------
-
-# Bibliographic Dublin Core info.
-epub_title = project
-epub_author = author
-epub_publisher = author
-epub_copyright = copyright
-
-# The unique identifier of the text. This can be a ISBN number
-# or the project homepage.
-#
-# epub_identifier = ''
-
-# A unique identification for the text.
-#
-# epub_uid = ''
-
-# A list of files that should not be packed into the epub file.
-epub_exclude_files = ['search.html']
