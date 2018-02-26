@@ -23,7 +23,7 @@
   :name: _lab-docs
   :hidden:
 
-  ssp/index
+  ssp/ssp
   calm/index
   vdi_ahv/index
   xtract-vm/xtract-vm
