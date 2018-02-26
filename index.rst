@@ -26,6 +26,6 @@
   ssp/index
   calm/index
   vdi_ahv/index
-  xtract-vm/index
+  xtract-vm/xtract-vm
 
 ..  example/index
