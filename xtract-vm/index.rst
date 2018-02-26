@@ -94,29 +94,6 @@ Select **Type or Paste Script**
 
   .. literalinclude:: xtract-vm-cloudinit-script
 
-  .. code-block:: bash
-
-    #cloud-config
-    disable_root: true
-    ssh_enabled: True
-    ssh_pwauth: True
-    runcmd:
-      - systemctl restart sshd
-      - userdel -r centos
-      - touch /opt/xtract-vm/.hermeskey
-      - 'dmidecode -s system-uuid | tee /opt/xtract-vm/.hermeskey'
-      - chown mgmtserver:vmxtract /opt/xtract-vm/.hermeskey
-      - chmod 440 /opt/xtract-vm/.hermeskey
-      - usermod -s /sbin/nologin root
-      - passwd -l root
-      # Set capabilities so that mgmtserver can bind to port 80 and tgtagent can mount
-      - setcap CAP_NET_BIND_SERVICE=ep /opt/xtract-vm/bin/mgmt-server
-      - setcap CAP_SYS_ADMIN=ep /opt/xtract-vm/bin/tgtagent
-      - systemctl restart mgmtserver tgtagent iptables
-      - chmod 555 /
-      - 'semanage fcontext --add --type user_home_dir_t "/home/admin(/.*)?"'
-      - restorecon -FRv /
-
 Now Power on the **Xtract-VM** VM
 
 When it completes it will open a browser window to the **Xtract for VMs** Dashboard
