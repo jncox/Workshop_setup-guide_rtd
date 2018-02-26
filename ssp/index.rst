@@ -12,11 +12,11 @@ Configure Self Service Portal
 
 We will use the following user information
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp01.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp01.png
 
 In **Prism Central**, click :fa:`cog` **> Self-Service Admin Management**.
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp02.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp02.png
 
 Fill out the following fields and click **Next**:
 
@@ -24,19 +24,19 @@ Fill out the following fields and click **Next**:
 - **Username** - adminuser01@poclab.local
 - **Passord** - nutanix/4u
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp03.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp03.png
 
 Click **+Add Admins**
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp04.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp04.png
 
 Enter **SSP Admins**, and Click **Save**
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp05.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp05.png
 
 Click **Save**
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp06.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp06.png
 
 Creat Projects
 +++++++++++++
@@ -65,11 +65,11 @@ Fill out the following fields and click **Save**:
 - **NAME** - SSP Developers
 - **ROLE** - Developer
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp08.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp08.png
 
 Under **Network** check the appropriate network, and make it default.
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp09.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp09.png
 
 Check the box for **Quotas**
 
@@ -81,7 +81,7 @@ Fill out the following fields:
 
 Confirm everything is filled out, and click **Save**
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp10.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp10.png
 
 Create **Power Users** Project
 .................
@@ -113,7 +113,7 @@ Fill out the following fields:
 
 Confirm everything is filled out, and click **Save**
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp11.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp11.png
 
 Create **Calm** Project
 .................
@@ -152,7 +152,7 @@ Under **Network** check the appropriate network, and make it default.
 
 Confirm everything is filled out, and click **Save**
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp12.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp12.png
 
 Use Self Service Portal
 +++++++++++++
@@ -169,7 +169,7 @@ Log into Prism Central with the following credentials:
 - **Username** - adminuserXX@poclab.local (replace XX with 01-05)
 - **Password** - nutanix/4u
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp13.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp13.png
 
 After you login you only have two tabs inthe top ribbon, **Explore** & **Apps**
 
@@ -177,11 +177,11 @@ You start on **VMs**, and should see all VMs the **adminuserXX** has access Tool
 
 Click on **Projects**, and you will see what Projects **adminuserXX** is a member of
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp14.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp14.png
 
 Now lets add some images to a **Catalog**, click on **Images**
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp15.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp15.png
 
 Check the box for **Windows2012**, and click **Add Image to Catalog** from the **Actions** dropdown
 
@@ -192,7 +192,7 @@ Fill out the following fields and click **Save**:
 - **NAME** - Windows2012 Image
 - **Description** - Windows2012 Image
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp17.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp17.png
 
 Repeat these steps for the CentOS Image
 
@@ -201,7 +201,7 @@ Click on **Catalog Items**, and you will see the two images you just added:
 - CentOS Image
 - Windows2012 Image
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp18.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp18.png
 
 Use Self Service Portal as a Developer
 .................
@@ -211,7 +211,7 @@ Log into Prism Central with the following credentials:
 - **Username** - devuserXX@poclab.local (replace XX with 01-05)
 - **Password** - nutanix/4u
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp19.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp19.png
 
 After you login you only have two tabs inthe top ribbon, **Explore** & **Apps**
 
@@ -219,17 +219,17 @@ You start on **VMs**, and should see all VMs the **devuserXX** has access Tools
 
 Click on **Projects**, and you will see what Projects **devuserXX** is a member of
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp20.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp20.png
 
 Click on **VMs**, then click **Create VM**
 
 Verify **Disk Images** is selected, and click **Next**
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp21.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp21.png
 
 Select **CentOS Image**, and click **Next**
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp22.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp22.png
 
 Fill out the following fields and click **Save**:
 
@@ -241,7 +241,7 @@ Fill out the following fields and click **Save**:
 - **CPU** - 1 VCPU
 - **Memory** - 2 GB
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp23.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp23.png
 
 You should now see VM **Developer VM 001** listed
 
@@ -255,7 +255,7 @@ Log into Prism Central with the following credentials:
 - **Username** - poweruserXX@poclab.local (replace XX with 01-05)
 - **Password** - nutanix/4u
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp24.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp24.png
 
 After you login you only have two tabs inthe top ribbon, **Explore** & **Apps**
 
@@ -267,11 +267,11 @@ click **Create VM**
 
 Verify **Disk Images** is selected, and click **Next**
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp21.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp21.png
 
 Select **CentOS Image**, and click **Next**
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp22.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp22.png
 
 Fill out the following fields and click **Save**:
 
@@ -283,7 +283,7 @@ Fill out the following fields and click **Save**:
 - **CPU** - 1 VCPU
 - **Memory** - 2 GB
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp25.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp25.png
 
 You should now see VM **Calm VM 001** listed
 
@@ -291,11 +291,11 @@ Logout, and log back in as **devuserXX@poclab.local**
 
 You should see both **Developer VM 001** & **Calm VM 001**. That is because **SSP Developers** is a member of both **Projects**
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp26.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp26.png
 
 Click on **Projects**, and you will see the resource usage of **Developer VM 001** against the **Developer** project quota.
 
-.. figure:: http://s3.nutanixtechsummit.com/ssp/ssp27.png
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp27.png
 
 Conclusions
 +++++++++++
