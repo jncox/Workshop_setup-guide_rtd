@@ -23,6 +23,7 @@ Run **"ls -l"**, and you will see the 3 different cli options
 You will launch the utility for your OS (Windows or OS X), and point to your teams HPOC
 
   .. code-block:: bash
+
     ./cli-darwin-amd64-1.1.2 -c 10.21.xx.37
 
 Next you will be promted to enter the **admin** Password
@@ -43,6 +44,7 @@ For this exercise we will use a static IP, you will need this information:
 - **Search Domains** - nutanixdc.local
 
   .. code-block:: bash
+
     deploy-vm vm-container CONTAINER-NAME vm-network Primary ip-address 10.21.XX.42 netmask 255.255.255.128 gateway 10.21.XX.1 dns1 10.21.253.10 dns2 10.21.253.11 searchdomains nutanixdc.local
 
 .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm04.png
@@ -93,6 +95,7 @@ Select **Type or Paste Script**
   .. literalinclude:: xtract-vm-cloudinit-script
 
   .. code-block:: bash
+
     #cloud-config
     disable_root: true
     ssh_enabled: True
