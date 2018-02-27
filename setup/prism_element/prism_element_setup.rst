@@ -109,7 +109,7 @@ Click **Create Network**
 
 Fill out the following fields and click **Save**:
 
-- **Name** - bootcamp
+- **Name** - Primary
 - **VLAN ID** - 0
 - **Enable IP Address Management** - Checked
 - **Network IP Address / Prefix Length** - 10.x.x.0/25
