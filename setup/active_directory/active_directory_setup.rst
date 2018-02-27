@@ -86,12 +86,12 @@ Create Directory & Download Scripts
 
 Log into the DC VM
 
-Create **c:\scripts** directory
+Create **c:\\scripts** directory
 
-Download **AutoSetupAD** & **add-users** (see below) to **c:\scripts**
+Download **AutoSetupAD** & **add-users** (see below) to **c:\\scripts**
 
-:download:`AutoSetupAD.ps1 <activedirectory/scripts/AutoSetupAD.ps1>`
-:download:`add-users.csv <activedirectory/scripts/add-users.csv>`
+:download:`AutoSetupAD.ps1 <active_directory/scripts/AutoSetupAD.ps1>`
+:download:`add-users.csv <active_directory/scripts/add-users.csv>`
 
 Run AutoSetupAD Script
 .................
