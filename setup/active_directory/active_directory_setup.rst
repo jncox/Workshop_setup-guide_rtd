@@ -90,8 +90,8 @@ Create **c:\\scripts** directory
 
 Download **AutoSetupAD** & **add-users** (see below) to **c:\\scripts**
 
-:download:`AutoSetupAD.ps1 <setup/active_directory/scripts/AutoSetupAD.ps1>`
-:download:`add-users.csv <setup/active_directory/scripts/add-users.csv>`
+:download:`AutoSetupAD <active_directory/scripts/AutoSetupAD.ps1>`
+:download:`add-users <active_directory/scripts/add-users.csv>`
 
 Run AutoSetupAD Script
 .................
