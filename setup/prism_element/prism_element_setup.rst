@@ -21,9 +21,9 @@ Connectivity & HPOC Info:
 
 We will use the following Info:
 
-- **IP** - Cluster IP
+- **Cluster IP** - 10.21.XX.37
 - **Username** - admin
-- **Password** - Password received
+- **Password** - HPOC Password
 - **HPOC Subnet** - 10.21.XX.0
 - *Subnet Mask** - 255.255.255.128
 - **Gateway** - 10.21.XX.1
@@ -127,7 +127,7 @@ Image Configuration
 
 Verify Image Configurations has what you need for your Workshop
 
-In **Prism Central**, click :fa:`cog` **> Image Configuration**
+In **Prism Element**, click :fa:`cog` **> Image Configuration**
 
 Depending on what you selected when reserving your HPOC you will see a CentOS7 Image & Windows 2012r2 Image
 
@@ -140,7 +140,7 @@ Setup Authentication and Role Mapping
 
 **Note:** Setup & Configure a Domain Controller before completing this section.
 
-In **Prism Central**, click :fa:`cog` **> Authentication**
+In **Prism Element**, click :fa:`cog` **> Authentication**
 
 Click **New Directory**
 
@@ -172,4 +172,4 @@ Log out of Prism Element
 
 Log in as **user01@bootcamp.local** using the password configured in the *add-user.csv* file.
 
-**Note:** If you are able to log in then you have completed Prism Element and AD setup
+**Note:** If you are able to log in then you have completed Prism Element Authentication Setup

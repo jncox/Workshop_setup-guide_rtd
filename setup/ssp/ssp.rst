@@ -5,7 +5,7 @@ Self-Service Portal
 Overview
 ++++++++
 
-In this exercise you will use Prism Central to configure Self Service Portal (SSP) from Prism Element, and create multiple projects for different groups of users. This lab should be completed **BEFORE** the :ref:`calm_lab` lab.
+In this exercise you will use Prism Central to configure Self Service Portal (SSP) from Prism Element, and create multiple projects for different groups of users. This lab should be completed **BEFORE** the Calm lab.
 
 Configure Self Service Portal
 +++++++++++++++++

@@ -1,201 +1,146 @@
-******************************
-Configuring HPOC Prism Central
-******************************
+-------------------
+Configuring Basic Prism Central
+-------------------
 
+Overview
++++++++++++++++++
 
-This Setup Guide is designed with these assumptions
-****************************************************
+In this guide we will configure Prism Central for the HPOC you have checked out. This includes SSP and Calm (Apps).
+
+Requirements
+.................
 
 1. AOS 5.5.x (or higher)
 2. AHV (for 5.5)
 
-
 Connectivity Instructions:
-**************************
+.................
 
-+--------------------------+------------------------------------------+
-| Prism Central IP         |                             Cluster IP   |
-+--------------------------+------------------------------------------+
-| Username                 |                             Cluster User |
-+--------------------------+------------------------------------------+
-| Password                 |                             Cluster Pass |
-+--------------------------+------------------------------------------+
+We will use the following Info:
 
-
-Overview
-********
-
-In this guide we will configure Prism Central for the HPOC you have checked out. This includes SSP and Calm (Apps).
-
+- **Prism Central IP** - 10.21.XX.39
+- **Username** - admin
+- **Password** - HPOC Password
 
 Configure Prism Central for Workshop
-************************************
++++++++++++++++++
 
-We will start by installing prism Central.  Users must be logged in as "admin" fto configure Prism Central(PC)...
+We will start by installing prism Central.  Users must be logged in as "admin" to configure Prism Central (PC).
 
+Install Prism Central
+.................
 
-Step 1 — Install Prism Central
-******************************
+Click on **Register or create new** on the Prism Central Widget (On the main Cluster page)
 
-1. Click on **Register or create new** on the Prism Central Widget (On the main Cluster page)
-2. Click on **Deploy** in the "I want to deploy a new Prims Central instance" box
-3. If 5.5.x shows under available version, click **Download**.
-4. If it does not show up, the you will need to click on **upload the Prism Central binary** (The tar & json files should be available on POCFS/HPOC-AFS)
-5. Click on **Install** next to 5.5.x
-6. Input the following info, and then click **Deploy**:
+Click on **Deploy** in the "I want to deploy a new Prims Central instance" box
 
-+--------------------------+------------------------------------------+
-| VM Name                  |                             PC           |
-+--------------------------+------------------------------------------+
-| Container                |                             Bootcamp     |
-+--------------------------+------------------------------------------+
-| VM Sizing                |                             Small        |
-+--------------------------+------------------------------------------+
-| AHV Network              |                             bootcamp     |
-+--------------------------+------------------------------------------+
-| IP Address               |                             10.x.x.39    |
-+--------------------------+------------------------------------------+
+If 5.5.x shows under available version, click **Download**.
+
+If it does not show up, the you will need to click on **upload the Prism Central binary** (The tar & json files should be available on POCFS/HPOC-AFS)
+
+Click on **Install** next to 5.5.x
+
+Fill out the following fields and click **Deploy**:
+
+- **VM Name** - PC
+- **Container** - Bootcamp
+- **VM Sizing** - Small
+- **AHV Network** - Primary
+- **IP Address** - 10.21.XX.39
 
 **Note:** Once the Prism Central deployment task finishes, move on
 
-7. In s separate browser tab, got to https://10.x.x.39:9440
-8. Log in with admin / Nutanix/4u
-9. Change password to HPOC Password
-10. Continue log in with admin / HPOC Password
-11. Accept the EULA
+Configure Prism Central for Workshop
++++++++++++++++++
 
+Start by logging in and accepting the EULA.
 
-Step 2 — Register Prism Central
-*******************************
+UI Settings
+.................
 
-1. Go to the Prism Element browser tab
-2. Click on **Register or create new** on the Prism Central Widget (On the main Cluster page)
-3. Click on **Connect** in the "I already have a Prism Central instance deployed" box
-4. Click **Next**
-5. Enter the following info, and then Click **Connect**:
+In s separate browser tab, got to https://10.x.x.39:9440
 
-+--------------------------+------------------------------------------+
-| Prism Central IP         |                          10.x.x.39       |
-+--------------------------+------------------------------------------+
-| Username                 |                          admin           |
-+--------------------------+------------------------------------------+
-| Password                 |                          HPOC Password   |
-+--------------------------+------------------------------------------+
+Log in with the following credentials:
 
-6. You should now see **OK** in the Prism Central Widget (On the main Cluster page)
+- **Username** - admin
+- **Password** - Nutanix/4u
 
+Change **Password** to the following:
 
-Step 3 — UI Settings
-********************
+- **Password** - HPOC password
 
-Change Session Timeout Values while loged in as "admin"
+Log in with the following:
 
-1. Go To Gear --> UI Settings
-2. Session Timeout for Current User = 30 minutes
-3. Default Session Timeout for all Users = 2 hours
-4. Session Timeout override = Allow unlimited
+- **Username** - admin
+- **Password** - HPOC password
 
+Accept the EULA
 
-Step 4 — Setup Authentication and Role Mapping
-**********************************************
+UI Settings
+.................
 
-1. Go To Gear --> Authentication
-2. Select **New Directory**
+Change Session Timeout Values
 
-+----------------------------+----------------------------------------+
-| Directory Type             |           Active Directory             |
-+----------------------------+----------------------------------------+
-| Name                       |           Bootcamp                     |
-+----------------------------+----------------------------------------+
-| Domain                     |           bootcamp.local               |
-+----------------------------+----------------------------------------+
-| Directory URL              |           ldap://10.x.x.40             |
-+----------------------------+----------------------------------------+
-| Service Account Name       |           administrator@bootcamp.local |
-+----------------------------+----------------------------------------+
-| Service Account Password   |           HPOC Password                |
-+----------------------------+----------------------------------------+
+In **Prism Central**, click :fa:`cog` **>  UI Settings**
 
-3. Click on the yellow ! next to Bootcamp
-4. Click on the **Click Here** to go to the Role Mapping screen
-5. Click **New Mapping**
+Fill out the following fields and click **Save**:
 
-+----------------------------+----------------------------------------+
-| Directory                  |           Bootcamp                     |
-+----------------------------+----------------------------------------+
-| LDAP Type                  |           group                        |
-+----------------------------+----------------------------------------+
-| Role                       |           Cluster Admin                |
-+----------------------------+----------------------------------------+
-| Values                     |           Bootcamp Users               |
-+----------------------------+----------------------------------------+
+- **Session Timeout for Current User** - 30 minutes
+- **Default Session Timeout for all Users** - 2 hours
+- **Session Timeout override** - Allow unlimited
 
-6. Close the Role Mapping and Authentication windows
-7. Log out of Prism Central
-8. Log in as **user01@bootcamp.local**
-9. Once you validate you can log in as user01, log out
+Register Prism Element with Prism Central
++++++++++++++++++
 
-Step 5 — Configure Self-Service Admin Management
-************************************************
+In **Prism Element**, click on **Register or create new** on the Prism Central Widget (On the main Cluster page)
 
-In this section we will configure Self-Service Portal (SSP)
+Click on **Connect** in the "I already have a Prism Central instance deployed" box
 
-1. Ensure you're Logged into Prism Central as user "admin"
-2. Go to Gear --> Self-Service Admin Management
-3. Fill in the following info under Connect to AD, and then click **Next**:
+Click **Next**
 
-+--------------------------+------------------------------------------+
-| Select Active Directory  |            Bootcamp                      |
-+--------------------------+------------------------------------------+
-| Username                 |            administrator@bootcamp.local  |
-+--------------------------+------------------------------------------+
-| Password                 |            HPOC Password                 |
-+--------------------------+------------------------------------------+
+Fill out the following fields and click **Connect**:
 
-4. Click on **Add Admins**, and add the "Bootcamp Users" group. Click **Save**
-5. Click **Save**
+- **Prism Central IP** - 10.21.XX.39
+- **Username** - admin
+- **Password** - HPOC password
 
+You should now see **OK** in the Prism Central Widget (On the main Cluster page)
 
-Step 6 — Enable App Management
-******************************
+Setup Authentication and Role Mapping
+.................
 
-In this section we will enable the Apps tab (Calm) of Prism Central
+**Note:** Setup & Configure a Domain Controller before completing this section.
 
-1. Go to Gear --> Enable App Management
-2. Check the box for **Enable App Management**
-3. Verify the box is checked for **Enable Nutanix Seeded Blueprints**
-4. Click **Save**
-5. Monitor Recent Tasks, and watch for the "Volume Group", "Volume Disk", and "Batch Configure" Tasks to complete
-6. Click on the **Apps** Tab in the Top Navigation Ribbon
-7. If you see the Calm UI you are done
+In **Prism Central**, click :fa:`cog` **> Authentication**
 
+Click **New Directory**
 
-Step 7 — Create Project for use in Calm
-***************************************
+Fill out the following fields and click **Save**:
 
-In this section will create a project for use with SSP & Calm
+- **Directory Type** - Active Directory
+- **Name** - Bootcamp
+- **Domain** - bootcamp.local
+- **Directory URL** - ldap://10.21.XX.40
+- **Service Account Name** - administrator@bootcamp.local
+- **Service Account Password** - HPOC Password
 
-1. Go to Explore --> Projects
-2. Click on **Create Project**
-3. Project Name = Calm
-4. Enter Description if you like
-5. Click **User**
-6. Enter the following info, and click **Save**
+Click on the yellow ! next to **Bootcamp**
 
-+----------------------------+----------------------------------------+
-| Name (User or Group)       |           Bootcamp Users (group)       |
-+----------------------------+----------------------------------------+
-| Role                       |           Developer                    |
-+----------------------------+----------------------------------------+
+Click on the **Click Here** to go to the Role Mapping screen
 
-7. Check the box for the **bootcamp** network, and make it **Default**
-8. Quotas (Optional)
-9. Click **Save**
+Click **New Mapping**
 
-**Note:** If the Users or Group you added are SSP Admins they will not show as group members. This is because they are already admins, and have access.
+Fill out the following fields and click **Save**:
 
+- **Directory** - Bootcamp
+- **LDAP Type** - group
+- **Role** - Cluster Admin
+- **Values** - Bootcamp Users
 
-Step 8 — Go forth and Create / Demo / Build / Have Fun
-******************************************************
+Close the Role Mapping and Authentication windows
 
-Build Some Blueprints / Applications / or deploy from the Marketplace
+Log out of Prism Central
+
+Log in as **user01@bootcamp.local** using the password configured in the *add-user.csv* file.
+
+**Note:** If you are able to log in then you have completed Prism Central Authentication Setup
