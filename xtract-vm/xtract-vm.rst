@@ -77,7 +77,7 @@ In **Prism > VM**, click **VM**, then click **Table**
 
 Click **+ Create VM**
 
-Fill out the following fields and click **Next**:
+Fill out the following fields and click **Save**:
 
 - **Name** - Xtract-VM
 - **Description** - Xtract for VMs
