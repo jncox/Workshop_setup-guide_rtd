@@ -26,13 +26,13 @@ Param(
 ######################################
 
 $ifIndexdefault = 12                       #usually the NIC interface is 12
-  
+
 $markerfile = "C:\scripts\PoCmarker.txt"   #pass information after reboots
 
 $step1 = "STEP1"                           #Next step marker
-$step2 = "STEP2"                           #Next step marker   
+$step2 = "STEP2"                           #Next step marker
 $step3 = "STEP3"                           #Next step marker
-$done = "DONE"                             #Termination marker     
+$done = "DONE"                             #Termination marker
 $op = "===== "                             #Helps with my ocd
 
 ######################################
@@ -86,7 +86,7 @@ if ((test-Path $markerfile) -eq $true) {
    }
 }
 Else {
-      write-host "$op First Run" 
+      write-host "$op First Run"
       $nextstep = $step1
 }
 
@@ -99,7 +99,7 @@ If ($nextstep -eq $step1) {
 ######################################
 # Get Network Info
 ######################################
-    
+
 # Prompt for IP Address
 if (!$IPAddress) {
     $IPAddress = Read-Host "$op Enter The IP Address For DC"
@@ -109,13 +109,13 @@ if (!$IPAddress) {
 if (!$Netmask) {
     $Netmask = Read-Host "$op Enter The Netmask For DC"
 }
-#>    
+#>
 # Prompt for Prefix Length
 if (!$Prefix) {
     Write-Host "$op Netmask Prefix Examples: 25 = 255.255.255.128 / 24 = 255.255.255.0 / 23 = 255.255.254.0)"
     $Prefix = Read-Host "Enter The Prefix"
 }
-        
+
 # Prompt for Gateway
 if (!$Gateway) {
     $Gateway = Read-Host "$op Enter The Gateway For DC"
@@ -125,7 +125,7 @@ if (!$Gateway) {
 if (!$dns1) {
     $dns1 = Read-Host "$op Enter The DNS Server For DC"
 }
-    
+
 # Prompt for Secondary DNS Server
 if (!$dns2) {
     $dns2 = Read-Host "$op Enter The Secondary DNS Server For DC"
@@ -154,9 +154,9 @@ $securepw =  $plainpw | ConvertTo-SecureString -AsPlainText -Force
    $interface | ft Name,ifIndex -AutoSize
    $ifIndex = $interface.ifIndex
    write-host "$op "
-   
+
    write-host "$op "
-   write-host "The following defaults to setup your AD server." 
+   write-host "The following defaults to setup your AD server."
    write-host "Static IP for AD Server: $IPAddress"
    #write-host "$op Netmask: $Netmask"
    write-host "Prefix: $Prefix"
@@ -173,10 +173,10 @@ $securepw =  $plainpw | ConvertTo-SecureString -AsPlainText -Force
    if ($go -eq "q") {exit}
    else { if ($go -eq "") {} }
    $continue = Read-Host "$op Will now change IP address and hostname then reboot, hit enter now to continue"
-   
+
    New-NetIPAddress –InterfaceIndex $ifIndex –IPAddress $IPAddress –PrefixLength $Prefix -DefaultGateway $Gateway
    Set-DnsClientServerAddress -InterfaceIndex $ifIndex -ServerAddresses ($dns1,$dns2)
-   
+
    #write a marker for when back from a reboot, pass on the pw too
    $EndStep1 = "Step2 $plainpw"
    $EndStep1 | Out-File $markerfile
@@ -190,7 +190,7 @@ $securepw =  $plainpw | ConvertTo-SecureString -AsPlainText -Force
 ######################################
 
 if ($nextstep -like $step2 ) {
-   
+
    write-host "$op Step 2: Add AD/DNS Role to server and add $DomainName Domain/Forest"
    $continue = Read-Host "$op just hit enter now to continue"
 
@@ -227,7 +227,7 @@ if ($nextstep -like $step3) {
     {
     $User.FirstName = $User.FirstName.substring(0,1).toupper()+$User.FirstName.substring(1).tolower()
     $FullName = $User.FirstName
-    $Sam = $User.FirstName 
+    $Sam = $User.FirstName
     $dnsroot = '@' + (Get-ADDomain).dnsroot
     $SAM = $sam.tolower()
     $UPN = $SAM + "$dnsroot"
@@ -237,11 +237,11 @@ if ($nextstep -like $step3) {
     try {
         if (!(get-aduser -Filter {samaccountname -eq "$SAM"})){
             New-ADUser -Name $FullName -AccountPassword (ConvertTo-SecureString $password -AsPlainText -force) -GivenName $User.FirstName  -Path $OU -SamAccountName $SAM -UserPrincipalName $UPN -EmailAddress $Email -Enabled $TRUE
-            Add-ADGroupMember -Identity $GroupName -Member $Sam
+            Add-ADGroupMember -Identity $GroupName -Members $Sam
             Write-Verbose "[PASS] Created $FullName"
             $successUsers += $FullName
         }
-  
+
     }
     catch {
         Write-Warning "[ERROR]Can't create user [$($FullName)] : $_"
@@ -250,7 +250,7 @@ if ($nextstep -like $step3) {
     }
     if ( !(test-path $LogFolder)) {
         Write-Verbose "Folder [$($LogFolder)] does not exist, creating"
-        new-item $LogFolder -type directory -Force 
+        new-item $LogFolder -type directory -Force
         }
 
     Write-verbose "Writing logs"
