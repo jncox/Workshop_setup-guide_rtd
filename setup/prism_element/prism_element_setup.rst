@@ -149,7 +149,7 @@ Fill out the following fields and click **Save**:
 - **Directory Type** - Active Directory
 - **Name** - Bootcamp
 - **Domain** - bootcamp.local
-- **Directory URL** - ldap://10.21.XX.40             |
+- **Directory URL** - ldap://10.21.XX.40
 - **Service Account Name** - administrator@bootcamp.local
 - **Service Account Password** - HPOC Password
 
