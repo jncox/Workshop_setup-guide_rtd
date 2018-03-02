@@ -224,7 +224,7 @@ Click the :fa:`plus-circle` to select **MSSQLSERVER\MSSQLSERVER**, and click **N
 
 If\When it asks you for a File Share add the following, and click **Save and Start the Plan**
 
-- **Server File Path** - \\10.21.64.53\xdb
+- **Server File Path** - \\\10.21.64.53\\xdb
 
 .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb25.png
 
