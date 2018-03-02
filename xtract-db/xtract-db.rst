@@ -189,7 +189,7 @@ Fill out the following fields and click **Next**:
 Fill out the following fields and click **Review**:
 
 - **SQL Server Image** - MS SQL Server 2016 ISO
-- **Service Pack (Optional)** - \\POCFS\ISO\Microsoft\SQL\SQLServer2016-KB3210089-x64.exe
+- **Service Pack (Optional)** - \\\POCFS\\ISO\\Microsoft\\SQL\\SQLServer2016-KB3210089-x64.exe
 
 .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb18.png
 
