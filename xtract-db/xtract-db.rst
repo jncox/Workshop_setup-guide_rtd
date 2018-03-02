@@ -212,15 +212,65 @@ Click **Create a Migration Plan**
 
 .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb22.png
 
+Click the :fa:`pencil` to update the Plane names
+
+- **Plane Name** - UptickDB Plan
+
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb24.png
+
 Click the :fa:`plus-circle` to select **MSSQLSERVER\MSSQLSERVER**, and click **Next**
 
 .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb23.png
 
+If\When it asks you for a File Share add the following, and click **Save and Start the Plan**
 
+- **Server File Path** - \\10.21.64.53\xdb
+
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb25.png
+
+Click **Proceed** to launch the **Migration**
+
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb26.png
+
+You may see a pop-up stating that the versions do not match, and it is proceeding (will use the service pack you uploaded)
+
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb27.png
+
+ When you see the status change to **Ready for Cutover**, Click the **Action** dropdown and click **Cutover Databases**
+
+ .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb28.png
+
+ Click **Proceed** to launch the **Cutover**
+
+ .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb29.png
+
+ You may see some pop-up messages like these, go ahead and close them.
+
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb30.png
+
+ When you see the status change to **Ready for Re-Balancing**, Click the **Action** dropdown and click **Initiate Post Cutover Processing**
+
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb31.png
+
+Check **Re-Balance Data in Databases**, and click **Start**
+
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb32.png
+
+ When you see the status change to **Ready for Final Processing**, Click the **Action** dropdown and click **Initiate Data Cleanup**
+
+ .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb33.png
+
+ Click **Proceed** to launch the **Cleanup**
+
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb34.png
+
+When everything is done, you will see status of **Completed**
+
+ .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb35.png
 
 Conclusions
 +++++++++++
 
-- A summary of key points from the lab
-- Can include highlighting relevant value proposition
-- Or key differentiators
+- Nutanix provides tools for migrating databases
+
+- Mirating databases is done in a very easy Nutanix way
