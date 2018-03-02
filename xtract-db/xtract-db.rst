@@ -10,7 +10,7 @@ In this exercise you will deploy, and use the Xtract tool to migrate a Database.
 Deploy Xtract for DBs
 +++++++++++++++++
 
-In **Prism > VM**, click ** VM**, then click **Table**
+In **Prism > VM**, click **VM**, then click **Table**
 
 .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb01.png
 
@@ -37,11 +37,11 @@ Login with the following credentials:
 - **Username** - nutanix
 - **Password** - nutanix/4u
 
- Fill in **Name**, **COmapny**, and **Job Title**, then **Accept** the EULA
+ Fill in **Name**, **Comapny**, and **Job Title**, then **Accept** the EULA
 
 .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb02.png
 
-Click **OK** when the **Nutanix Customer Experience Program** pops up
+Click **OK** on the **Nutanix Customer Experience Program** pop-up
 
 .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb03.png
 
