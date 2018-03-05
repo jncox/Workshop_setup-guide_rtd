@@ -13,7 +13,7 @@ Configure Self Service Portal
 We will use the following user information
 
 +-----------------+-----------------------+--------------------------------+
-| Group           | Usernames             | Password                       |
+| **Group**       | **Usernames**         | **Password**                   |
 +-----------------+-----------------------+--------------------------------+
 | SSP Admins      | adminuser01-05        | nutanix/4u                     |
 +-----------------+-----------------------+--------------------------------+
