@@ -23,7 +23,6 @@ We will use the following user information
 +-----------------+-----------------------+--------------------------------+
 | SSp Basic Users | basicuser01-05        | nutanix/4u                     |
 +-----------------+-----------------------+--------------------------------+
-  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp01.png
 
 In **Prism Central**, click :fa:`cog` **> Self-Service Admin Management**.
 
