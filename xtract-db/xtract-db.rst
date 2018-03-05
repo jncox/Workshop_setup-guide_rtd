@@ -61,7 +61,7 @@ Enter project name, and click **Create New Project**:
 
 Fill out the following fields and click **Begin Scan**:
 
-- **HOSTNAME (OR IP ADDRESS)** - IP of the Windows 2012 Server MS SQL lives on
+- **HOSTNAME (OR IP ADDRESS)** - *IP of the Windows 2012 Server MS SQL lives on*
 - **Instance Name (Or Port)** - 1433
 - **Username** - administrator
 - **Password** - nutanix/4u
@@ -97,7 +97,7 @@ Click the :fa:`pencil` to change the Design name.
 
 Fill out the following fields and click **Save**:
 
-- **Custom Design Name** - MSSQLSERVER-UPTICK-WebsiteDB.
+- **Custom Design Name** - MSSQLSERVER-UPTICK-WebsiteDB
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb10.png
 
@@ -161,7 +161,7 @@ Ensure you have all the Pre-Requisites, and click **Proceed to Deploy**.
  - **IP Address** - 10.21.XX.37
  - **Port** - 9440
  - **Username** - admin
- - **Password** - Prism Password
+ - **Password** - *Prism Password*
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb14.png
 

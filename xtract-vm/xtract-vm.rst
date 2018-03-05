@@ -28,7 +28,7 @@ Fill out the following fields and click **Save**:
 - **Disks** - **Remove CD-ROM**
 - **Network** - Primary
 - **IP Address** - 10.21.XX.42
-- **Custom Script** - Check the Box
+- **Custom Script** - Select the Box
 Select **Type or Paste Script**
 
   .. literalinclude:: xtract-vm-cloudinit-script
@@ -81,7 +81,7 @@ In **Xtract**, click **+ Add Target Environment**.
 
 Fill out the following fields and click **Add**:
 
-- **Target Name** - POCXXX
+- **Target Name** - *POCXXX*
 - **vCenter Server** - 10.21.XX.37
 - **User Name** - admin
 - **Passwrod** - techX2018!
@@ -107,8 +107,8 @@ Enter Migration Plan Name, and click **OK**:
 
 Enter Migration Plan Name, and click **Next**:
 
-- **Select Target** - POCXXX
-- **Target Container** - CONTAINER-NAME
+- **Select Target** - *POCXXX*
+- **Target Container** - *CONTAINER-NAME*
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm14.png
 
@@ -118,7 +118,7 @@ Select **View-Win10-GoldenImage** VM, and click **Next**.
 
 Fill out the following fields and click **Next**:
 
-- **Common Windows Credentials*
+- **Common Windows Credentials**
 - **User Name** - administrator
 - **Password** - nutanix/4u
 - **Target Network** - Primary
