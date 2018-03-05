@@ -7,33 +7,45 @@ Overview
 
 In this exercise you will deploy, and use the Xtract tools to migrate a VM.
 
-Deploy Xtract for VMs from Prism
+Deploy Xtract for VMs from CLI
 +++++++++++++++++
 
-In **Prism > VM**, click **VM**, then click **Table**.
+Downloaded, and unzip **xtract-vm-1.1.2-release.zip** from the Nutanix Portal.
 
-  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm01.png
+Open a Shell on your laptop, and navigate to the unzipped xtract directory.
 
-Click **+ Create VM**.
+Run **"ls -l"**, and you will see the 3 different cli options.
 
-Fill out the following fields and click **Save**:
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm02.png
 
-- **Name** - Xtract-VM
-- **Description** - Xtract for VMs
-- **VCPU(S)** - 2
-- **Cores** - 2
-- **Memory** - 4GiB
-- **Disks** - **+ Add New Disk**
-- **Disk Image (From Image Service)** - Xtract-VM
-- **Disks** - **Remove CD-ROM**
-- **Network** - Primary
+You will launch the utility for your OS (Windows or OS X), and point to your teams HPOC.
+
+  .. code-block:: bash
+
+    ./cli-darwin-amd64-1.1.2 -c 10.21.xx.37
+
+Next you will be promted to enter the **admin** Password.
+
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm03.png
+
+Now you can deploy the **Xtract** VM.
+
+To do this you will need the name of your **storage container**, **Network**, and **IP Address**.
+
+For this exercise we will use a static IP, you will need this information:
+
 - **IP Address** - 10.21.XX.42
-- **Custom Script** - Check the Box
-Select **Type or Paste Script**
+- **Netmask** - 255.255.255.128
+- **Gateway** - 10.21.XX.1
+- **DNS1** - 10.21.253.10
+- **DNS2** - 10.21.253.11
+- **Search Domains** - nutanixdc.local
 
-  .. literalinclude:: xtract-vm-cloudinit-script
+  .. code-block:: bash
 
-Now Power on the **Xtract-VM** VM.
+    deploy-vm vm-container CONTAINER-NAME vm-network Primary ip-address 10.21.XX.42 netmask 255.255.255.128 gateway 10.21.XX.1 dns1 10.21.253.10 dns2 10.21.253.11 searchdomains nutanixdc.local
+
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm04.png
 
 When it completes it will open a browser window to the **Xtract for VMs** Dashboard.
 
@@ -41,7 +53,7 @@ Accept the EULA, and click **Continue**.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm05.png
 
-Click **OK** on the **Nutanix Customer Experience Program**
+Click **OK** on the **Nutanix Customer Experience Program**.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm06.png
 
