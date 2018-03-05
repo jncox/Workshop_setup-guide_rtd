@@ -12,6 +12,17 @@ Configure Self Service Portal
 
 We will use the following user information
 
++-----------------+-----------------------+--------------------------------+
+| Group           | Usernames             | Password                       |
++-----------------+-----------------------+--------------------------------+
+| SSP Admins      | adminuser01-05        | nutanix/4u                     |
++-----------------+-----------------------+--------------------------------+
+| SSp Developers  | devuser01-05          | nutanix/4u                     |
++-----------------+-----------------------+--------------------------------+
+| SSP Power Users | poweruser01-05        | nutanix/4u                     |
++-----------------+-----------------------+--------------------------------+
+| SSp Basic Users | basicuser01-05        | nutanix/4u                     |
++-----------------+-----------------------+--------------------------------+
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp01.png
 
 In **Prism Central**, click :fa:`cog` **> Self-Service Admin Management**.
