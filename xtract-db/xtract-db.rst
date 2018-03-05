@@ -173,7 +173,7 @@ Fill out the following fields and click **Next**:
 
 - **Name** - MSSQL
 - **Container Name** - Databases
-- **Retain clone of master VM on the Container** - Unchecked
+- **Retain clone of master VM on the Container** - Unselected
 - **Network** - Primary
 - **DHCP** - Selected
 

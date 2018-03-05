@@ -56,7 +56,7 @@ Fill out the following fields:
 
 - **Project Name** - Developers
 - **Description** - SSP Developers
-- **AHV Cluster** - Assigned hpoc
+- **AHV Cluster** - *Assigned hpoc*
 
 Click **+User** under **Users, Groups, and Roles**
 
@@ -92,7 +92,7 @@ Fill out the following fields:
 
 - **Project Name** - Power Users
 - **Description** - SSP Power Users
-- **AHV Cluster** - Assigned hpoc
+- **AHV Cluster** - *Assigned hpoc*
 
 Click **+User** under **Users, Groups, and Roles**
 
