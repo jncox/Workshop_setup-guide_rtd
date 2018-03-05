@@ -7,6 +7,37 @@ Overview
 
 In this exercise you will use Prism Central to configure Self Service Portal (SSP) from Prism Element, and create multiple projects for different groups of users. This lab should be completed **BEFORE** the Calm lab.
 
+Setup Authentication and Role Mapping in Prism Central
++++++++++++++++++
+
+In **Prism Central**, click :fa:`cog` **> Authentication**
+
+Click **New Directory**
+
+Fill out the following fields and click **Save**:
+
+- **Directory Type** - Active Directory
+- **Name** - NTNXLAB
+- **Domain** - ntnxlab.local
+- **Directory URL** - ldap://10.21.XX.40
+- **Service Account Name** - administrator@ntnxlab.local
+- **Service Account Password** - nutanix/4u
+
+Click on the yellow ! next to **NTNXLAB**
+
+Click on the **Click Here** to go to the Role Mapping screen
+
+Click **New Mapping**
+
+Fill out the following fields and click **Save**:
+
+- **Directory** - NTNXLAB
+- **LDAP Type** - user
+- **Role** - Cluster Admin
+- **Values** - administrator@ntnxlab.local
+
+Close the Role Mapping and Authentication windows
+
 Configure Self Service Portal
 +++++++++++++++++
 
