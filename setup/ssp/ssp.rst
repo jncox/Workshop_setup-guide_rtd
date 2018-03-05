@@ -17,11 +17,11 @@ We will use the following user information
 +-----------------+-----------------------+--------------------------------+
 | SSP Admins      | adminuser01-05        | nutanix/4u                     |
 +-----------------+-----------------------+--------------------------------+
-| SSp Developers  | devuser01-05          | nutanix/4u                     |
+| SSP Developers  | devuser01-05          | nutanix/4u                     |
 +-----------------+-----------------------+--------------------------------+
 | SSP Power Users | poweruser01-05        | nutanix/4u                     |
 +-----------------+-----------------------+--------------------------------+
-| SSp Basic Users | basicuser01-05        | nutanix/4u                     |
+| SSP Basic Users | basicuser01-05        | nutanix/4u                     |
 +-----------------+-----------------------+--------------------------------+
 
 In **Prism Central**, click :fa:`cog` **> Self-Service Admin Management**.
@@ -30,8 +30,8 @@ In **Prism Central**, click :fa:`cog` **> Self-Service Admin Management**.
 
 Fill out the following fields and click **Next**:
 
-- **Domain** - poclab.local
-- **Username** - adminuser01@poclab.local
+- **Domain** - ntnxlab.local
+- **Username** - adminuser01@ntnxlab.local
 - **Passord** - nutanix/4u
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp03.png
@@ -66,7 +66,7 @@ Fill out the following fields:
 
 - **Project Name** - Developers
 - **Description** - SSP Developers
-- **AHV Cluster** - *Assigned hpoc*
+- **AHV Cluster** - *Assigned HPOC*
 
 Click **+User** under **Users, Groups, and Roles**
 
@@ -102,7 +102,7 @@ Fill out the following fields:
 
 - **Project Name** - Power Users
 - **Description** - SSP Power Users
-- **AHV Cluster** - *Assigned hpoc*
+- **AHV Cluster** - *Assigned HPOC*
 
 Click **+User** under **Users, Groups, and Roles**
 
@@ -134,7 +134,7 @@ Fill out the following fields:
 
 - **Project Name** - Calm
 - **Description** - Calm
-- **AHV Cluster** - Assigned hpoc
+- **AHV Cluster** - *Assigned HPOC*
 
 Click **+User** under **Users, Groups, and Roles**
 
@@ -176,7 +176,7 @@ Use Self Service Portal as a SSP Admin
 
 Log into Prism Central with the following credentials:
 
-- **Username** - adminuserXX@poclab.local (replace XX with 01-05)
+- **Username** - adminuserXX@ntnxlab.local (replace XX with 01-05)
 - **Password** - nutanix/4u
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp13.png
@@ -218,7 +218,7 @@ Use Self Service Portal as a Developer
 
 Log into Prism Central with the following credentials:
 
-- **Username** - devuserXX@poclab.local (replace XX with 01-05)
+- **Username** - devuserXX@ntnxlab.local (replace XX with 01-05)
 - **Password** - nutanix/4u
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp19.png
@@ -262,7 +262,7 @@ Use Self Service Portal as a Power User
 
 Log into Prism Central with the following credentials:
 
-- **Username** - poweruserXX@poclab.local (replace XX with 01-05)
+- **Username** - poweruserXX@ntnxlab.local (replace XX with 01-05)
 - **Password** - nutanix/4u
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp24.png
@@ -297,7 +297,7 @@ Fill out the following fields and click **Save**:
 
 You should now see VM **Calm VM 001** listed
 
-Logout, and log back in as **devuserXX@poclab.local**
+Logout, and log back in as **devuserXX@ntnxlab.local**
 
 You should see both **Developer VM 001** & **Calm VM 001**. That is because **SSP Developers** is a member of both **Projects**
 
