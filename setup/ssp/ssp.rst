@@ -12,7 +12,7 @@ Setup Authentication and Role Mapping in Prism Central
 
 In **Prism Central**, click :fa:`cog` **> Authentication**
 
-Click **New Directory**
+Click **+ New Directory**
 
 Fill out the following fields and click **Save**:
 
@@ -23,18 +23,24 @@ Fill out the following fields and click **Save**:
 - **Service Account Name** - administrator@ntnxlab.local
 - **Service Account Password** - nutanix/4u
 
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp01.png
+
 Click on the yellow ! next to **NTNXLAB**
+
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp28.png
 
 Click on the **Click Here** to go to the Role Mapping screen
 
-Click **New Mapping**
+Click **+ New Mapping**
 
 Fill out the following fields and click **Save**:
 
 - **Directory** - NTNXLAB
 - **LDAP Type** - user
 - **Role** - Cluster Admin
-- **Values** - administrator@ntnxlab.local
+- **Values** - administrator
+
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp29.png
 
 Close the Role Mapping and Authentication windows
 
@@ -46,13 +52,13 @@ We will use the following user information
 +-----------------+-----------------------+--------------------------------+
 | **Group**       | **Usernames**         | **Password**                   |
 +-----------------+-----------------------+--------------------------------+
-| SSP Admins      | adminuser01-05        | nutanix/4u                     |
+| SSP Admins      | adminuser01-25        | nutanix/4u                     |
 +-----------------+-----------------------+--------------------------------+
-| SSP Developers  | devuser01-05          | nutanix/4u                     |
+| SSP Developers  | devuser01-25          | nutanix/4u                     |
 +-----------------+-----------------------+--------------------------------+
-| SSP Power Users | poweruser01-05        | nutanix/4u                     |
+| SSP Power Users | poweruser01-25        | nutanix/4u                     |
 +-----------------+-----------------------+--------------------------------+
-| SSP Basic Users | basicuser01-05        | nutanix/4u                     |
+| SSP Basic Users | basicuser01-25        | nutanix/4u                     |
 +-----------------+-----------------------+--------------------------------+
 
 In **Prism Central**, click :fa:`cog` **> Self-Service Admin Management**.
@@ -62,7 +68,7 @@ In **Prism Central**, click :fa:`cog` **> Self-Service Admin Management**.
 Fill out the following fields and click **Next**:
 
 - **Domain** - ntnxlab.local
-- **Username** - adminuser01@ntnxlab.local
+- **Username** - administrator@ntnxlab.local
 - **Passord** - nutanix/4u
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp03.png
@@ -186,7 +192,7 @@ Fill out the following fields and click **Save**:
 
 Fill out the following fields and click **Save**:
 
-- **NAME** - SSP basic Users
+- **NAME** - SSP Basic Users
 - **ROLE** - Operator
 
 Under **Network** check the appropriate network, and make it default.
@@ -338,7 +344,7 @@ Click on **Projects**, and you will see the resource usage of **Developer VM 001
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp27.png
 
-Conclusions
+Takeaways
 +++++++++++
 
 - Nutanix provides a native service to seperate out resources for different groups, while giving them a Self-Service approach to using those resources.
