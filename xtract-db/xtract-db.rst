@@ -10,11 +10,11 @@ In this exercise you will deploy, and use the Xtract tool to migrate a Database.
 Deploy Xtract for DB
 +++++++++++++++++
 
-In **Prism > VM**, click **VM**, then click **Table**.
+In **Prism Central > Explore*, click **VMs**.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb01.png
 
-Click **+ Create VM**.
+Click **Create VM**.
 
 Fill out the following fields and click **Save**:
 
@@ -61,11 +61,11 @@ Enter project name, and click **Create New Project**:
 
 Fill out the following fields and click **Begin Scan**:
 
+- **Scan Name** - Parts DB
 - **HOSTNAME (OR IP ADDRESS)** - *IP of the Windows 2012 Server MS SQL lives on*
 - **Instance Name (Or Port)** - 1433
-- **Username** - administrator
+- **Username** - NTNXLAB\Administrator
 - **Password** - nutanix/4u
-- **Scan Name** - Parts DB
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb05.png
 
@@ -81,6 +81,13 @@ Fill out the following fields and click **Re-Scan**:
 - **Password** - nutanix/4u
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb07.png
+
+If/When the **XP Command Shell** pop-up displays, fill out the following fields and click **Done**;
+
+- **Username** - sa
+- **Password** - nutanix/4u
+
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb36.png
 
 After the scan completes successfully, you will see the overview page.
 
@@ -111,8 +118,6 @@ Prepare **Xtract Master** VM
 .................
 
 In **Prism > VM**, click **VM**, then click **Table**.
-
-  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb01.png
 
 Click **+ Create VM**.
 
@@ -184,6 +189,18 @@ Fill out the following fields and click **Next**:
 - **Target VM Master Image** - Xtract-DB-2012r2-Master
 - **Target VM Password** - nutanix/4u
 
+Select **Edit TargetVMs to the Domain details**
+
+Fill out the following fields and click **Validate and Save**:
+
+- **Domain Name** - ntnxlad.local
+- **Domain User Name** - administrator@ntnxlab.local
+- **Domain Password** - nutanix/4u
+
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb37.png
+
+Disregard any errors about connecting to the domain.
+
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb17.png
 
 Fill out the following fields and click **Review**:
@@ -238,7 +255,7 @@ You may see a pop-up stating that the versions do not match, and it is proceedin
 
  When you see the status change to **Ready for Cutover**, Click the **Action** dropdown and click **Cutover Databases**.
 
-   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb28.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb28.png
 
  Click **Proceed** to launch the **Cutover**.
 
@@ -266,7 +283,7 @@ Check **Re-Balance Data in Databases**, and click **Start**.
 
 When everything is done, you will see status of **Completed**.
 
-   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb35.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb35.png
 
 Conclusions
 +++++++++++

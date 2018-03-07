@@ -10,11 +10,11 @@ In this exercise you will deploy, and use the Xtract tools to migrate a VM.
 Deploy Xtract for VMs from Prism
 +++++++++++++++++
 
-In **Prism > VM**, click **VM**, then click **Table**.
+In **Prism Central > Explore*, click **VMs**.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm01.png
 
-Click **+ Create VM**.
+Click **Create VM**.
 
 Fill out the following fields and click **Save**:
 
@@ -35,7 +35,7 @@ Select **Type or Paste Script**
 
 Now Power on the **Xtract-VM** VM.
 
-When it completes it will open a browser window to the **Xtract for VMs** Dashboard.
+When it completes open a browser window to the **Xtract for VMs** Dashboard http://10.21.XX.42.
 
 Accept the EULA, and click **Continue**.
 
@@ -69,9 +69,9 @@ In **Xtract**, click **+ Add Source Environment**.
 Fill out the following fields and click **Add**:
 
 - **Source Name** - Tech Summit 2018 vCenter
-- **vCenter Server** - 10.21.64.40
+- **vCenter Server** - *Tech Summit vCenter Server*
 - **User Name** - administrator@vsphere.local
-- **Passwrod** - techX2018!
+- **Passwrod** - *vCenter Password*
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm09.png
 
@@ -84,7 +84,7 @@ Fill out the following fields and click **Add**:
 - **Target Name** - *POCXXX*
 - **vCenter Server** - 10.21.XX.37
 - **User Name** - admin
-- **Passwrod** - techX2018!
+- **Passwrod** - *Prism Password*
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm10.png
 
@@ -133,7 +133,7 @@ Now you can watch the Migration process in the dashboard.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm18.png
 
-Once the migration completes, you can **Perform Cutover Operation**.
+Once the migrated data reaches the data size, or the migration completes, you can **Perform Cutover Operation**.
 
 Perform Cutover Operation
 .................
@@ -142,7 +142,7 @@ In **Xtract**, click **Migration In Progress**.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm19.png
 
-Check the box for **View-Win10-GoldenImage**, and click **Cutover**.
+Select the box for **View-Win10-GoldenImage**, and click **Cutover**.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm20.png
 
