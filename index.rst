@@ -26,7 +26,7 @@
   calm/index
   vdi_ahv/index
   xtract-vm/xtract-vm
-  xtract-vm/xtract-vm-cli
+  #xtract-vm/xtract-vm-cli
   xtract-db/xtract-db
 
 ..  example/index
