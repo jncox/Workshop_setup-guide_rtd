@@ -258,9 +258,9 @@ Click **Create a Migration Plan**
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb22.png
 
-Click the :fa:`pencil` to update the Plane names.
+Click the :fa:`pencil` to update the Plan names.
 
-- **Plane Name** - UptickDB Plan.
+- **Plan Name** - UptickDB Plan.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb23.png
 
