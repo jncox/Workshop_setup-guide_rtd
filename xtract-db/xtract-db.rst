@@ -83,7 +83,7 @@ Fill out the following fields and click **Begin Scan**:
 - **Username** - ``NTNXLAB\Administrator``
 - **Password** - nutanix/4u
 
-  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb05.png
+#  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb05.png
 
 If/When the scan fails, you will need uplift the permissions of the scan User.
 
@@ -159,6 +159,8 @@ Install Nutanix Guest Tools, and Restart.
 Disable the Windows Firewall Service
 
 Log in and run Windows Update to get the latest updates, and Restart.
+
+.. Note:: You need update KB2919355 for MSSQLServer to install correctly
 
 Now turn off Windows Update
 
