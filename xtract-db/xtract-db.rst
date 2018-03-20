@@ -209,35 +209,35 @@ Fill out the following fields and click **Next**:
 - **Target VM Master Image** - Xtract-DB-2012r2-Master
 - **Target VM Password** - nutanix/4u
 
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb17.png
+
 Fill out the following fields and click **Review**:
 
 - **SQL Server Image** - MMSSQL-2016SP1-ISO
 - **Service Pack (Optional)** - ``http://10.21.64.50/images/SQLServer2016-KB3210089-x64.exe``
 
-.. Note:: You will need to download SQLServer2016 Service Pack before you can upload.
+  .. Note:: You will need to download SQLServer2016 Service Pack before you can upload.
 
-  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb18.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb18.png  
 
-  Select **Enter Account Credentials**
+Select **Enter Account Credentials**
 
-  Fill out the following fields and click **Next**:
+Fill out the following fields and click **Next**:
 
-  - **Domain Account Name** - ``ntnxlab\adminuser01``
-  - **Password** - nutanix/4u
+- **Domain Account Name** - ``ntnxlab\adminuser01``
+- **Password** - nutanix/4u
 
-    .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb38.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb38.png
 
-  Fill out the following fields and click **Validate and Save**:
+Fill out the following fields and click **Validate and Save**:
 
-  - **Domain Name** - ntnxlab.local
-  - **Domain User Name** - administrator@ntnxlab.local
-  - **Domain Password** - nutanix/4u
+- **Domain Name** - ntnxlab.local
+- **Domain User Name** - administrator@ntnxlab.local
+- **Domain Password** - nutanix/4u
 
-    .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb37.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb37.png
 
-  Disregard any errors about connecting to the domain.
-
-    .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb17.png
+Disregard any errors about connecting to the domain.
 
 Ensure everything is correct, and click **Deploy**.
 
