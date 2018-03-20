@@ -216,9 +216,9 @@ Fill out the following fields and click **Review**:
 - **SQL Server Image** - MMSSQL-2016SP1-ISO
 - **Service Pack (Optional)** - ``http://10.21.64.50/images/SQLServer2016-KB3210089-x64.exe``
 
-  .. Note:: You will need to download SQLServer2016 Service Pack before you can upload.
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb18.png
 
-  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb18.png  
+  .. Note:: You will need to download SQLServer2016 Service Pack before you can upload.
 
 Select **Enter Account Credentials**
 
