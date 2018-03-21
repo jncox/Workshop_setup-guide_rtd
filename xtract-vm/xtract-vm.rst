@@ -1,19 +1,19 @@
 .. _xtractvm_lab:
 
--------------------
+--------------
 Xtract for VMs
--------------------
+--------------
 
 Overview
 ++++++++
 
 .. note::
 
-  This lab should be completed **AFTER** the :ref:`ssp` lab.
+  This lab should be completed **AFTER** the :ref:`ssp_lab` lab.
 
   Estimated time to complete: **1 HOUR**
 
-In this exercise you will deploy, and use the Xtract tools to migrate a VM.
+In this exercise you will deploy Xtract for VMs and migrate a VM from ESXi to AHV.
 
 Getting Engaged with the Product Team
 .....................................
@@ -23,60 +23,66 @@ Getting Engaged with the Product Team
 - **Product Marketing Manager** - Marc Trouard-Riolle, marc.trouardriolle@nutanix.com
 - **Technical Marketing Engineer** - Mike McGhee, michael.mcghee@nutanix.com
 
-Deploy Xtract for VMs from Prism
-+++++++++++++++++
+Deploying Xtract for VMs
+++++++++++++++++++++++++
 
-In **Prism Central > Explore*, click **VMs**.
-
-  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm01.png
-
-Click **Create VM**.
+In **Prism Central > Explore > VMs**, click **Create VM**.
 
 Fill out the following fields and click **Save**:
 
 - **Name** - Xtract-VM
 - **Description** - Xtract for VMs
-- **VCPU(S)** - 2
-- **Cores** - 2
-- **Memory** - 4GiB
-- **Disks** - **+ Add New Disk**
-- **Disk Image (From Image Service)** - Xtract-VM
-- **Disks** - **Remove CD-ROM**
-- **Network** - Primary
-- **IP Address** - 10.21.XX.42
-- **Custom Script** - Select the Box
-Select **Type or Paste Script**
+- **vCPU(s)** - 2
+- **Number of Cores per vCPU** - 2
+- **Memory** - 4 GiB
+- Select **+ Add New Disk**
 
-  .. literalinclude:: xtract-vm-cloudinit-script
+  - **Operation** - Clone from Image Service
+  - **Image** - Xtract-VM
+  - Select **Add**
+- Remove **CD-ROM** Disk
+- Select **Add New NIC**
 
-Now Power on the **Xtract-VM** VM.
+  - **VLAN Name** - Primary
+  - **IP Address** - *10.21.XX.42*
+  - Select **Add**
+- Select **Custom Script**
+- Select **Type or Paste Script**
 
-When it completes open a browser window to the **Xtract for VMs** Dashboard http://10.21.XX.42.
+.. literalinclude:: xtract-vm-cloudinit-script
+   :caption: Xtract-VM Custom Script
 
-Accept the EULA, and click **Continue**.
+Select the **Xtract-VM** VM and click **Actions > Power on**.
+
+Open \https://<*XTRACT-VM-IP*>/ in a browser to access the **Xtract for VMs** dashboard.
+
+Select **I have read and agree to terms and conditions**, and click **Continue**.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm05.png
 
-Click **OK** on the **Nutanix Customer Experience Program**
+Click **OK** when prompted about the **Nutanix Customer Experience Program**.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm06.png
 
-Set **Password** to "nutanix/4u".
+Fill out the following fields and click **Set Password**:
+
+- **Enter New Password** - nutanix/4u
+- **Re-enter New Password** - nutanix/4u
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm07.png
 
-Login with the following credentials:
+Log in with the following credentials:
 
 - **Username** - nutanix
 - **Password** - nutanix/4u
 
-Migrate VM with Xtract for VMs
-+++++++++++++
+Migrating a VM
+++++++++++++++
 
 In this portion of the lab we will configure source and target environments, create a migration plan, and finally perform a cutover operation.
 
-Configure **Source** and **Targets** environements.
-.................
+Configuring Source and Target
+.............................
 
 In **Xtract**, click **+ Add Source Environment**.
 
@@ -85,9 +91,9 @@ In **Xtract**, click **+ Add Source Environment**.
 Fill out the following fields and click **Add**:
 
 - **Source Name** - Tech Summit 2018 vCenter
-- **vCenter Server** - *Tech Summit vCenter Server*
+- **vCenter Server** - *<Source vCenter Server IP>*
 - **User Name** - administrator@vsphere.local
-- **Passwrod** - *vCenter Password*
+- **Password** - *<vCenter Password>*
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm09.png
 
@@ -97,46 +103,45 @@ In **Xtract**, click **+ Add Target Environment**.
 
 Fill out the following fields and click **Add**:
 
-- **Target Name** - *POCXXX*
-- **vCenter Server** - 10.21.XX.37
+- **Target Name** - *<Target Nutanix Cluster Name>*
+- **Nutanix Environment** - *<Nutanix Cluster Virtual IP>*
 - **User Name** - admin
-- **Passwrod** - *Prism Password*
+- **Password** - *<Nutanix admin Password>*
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm10.png
 
-Now you should have **Source** and **Target** environments configured.
+Note both **Source** and **Target** environments have been configured.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm11.png
 
-Create a Migration Plan
-.................
+Creating a Migration Plan
+.........................
 
 In **Xtract**, click **Create a Migration Plan**.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm12.png
 
-Enter Migration Plan Name, and click **OK**:
+Enter a **Migration Plan Name** and click **OK**:
 
-- **Migration Plan Name** - ViewImage-Team-XX Migration.
+- **Migration Plan Name** - ViewImage-Team-*<XX>* Migration.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm13.png
 
-Enter Migration Plan Name, and click **Next**:
+Fill out the following fields and click **Next**:
 
-- **Select Target** - *POCXXX*
-- **Target Container** - *CONTAINER-NAME*
+- **Select Target** - *<Target Nutanix Cluster Name>*
+- **Target Container** - Default
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm14.png
 
-Select **ViewImage-Team-XX** VM, and click **Next**.
+Select **ViewImage-Team-XX** VM and click **Next**.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm15.png
 
 Fill out the following fields and click **Next**:
 
-- **Common Windows Credentials**
-- **User Name** - administrator
-- **Password** - nutanix/4u
+- **Common Windows Credentials User Name** - administrator
+- **Common Windows Credentials Password** - nutanix/4u
 - **Target Network** - Primary
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm16.png
@@ -145,20 +150,26 @@ Click **Save and Start**.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm17.png
 
-Now you can watch the Migration process in the dashboard.
+Monitor the status of the Migration Plan from the dashboard.
 
-  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm18.png
+.. note::
 
-Once the migrated data reaches the data size, or the migration completes, you can **Perform Cutover Operation**.
+  Clicking the **Status** link will display data migration progress and estimated time remaining for individual VMs.
 
-Perform Cutover Operation
-.................
+  Migrations can also be paused or aborted via the Migration Plan **Action** menu.
 
-In **Xtract**, click **Migration In Progress**.
+.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm18.png
+
+Performing VM Cutover
+.....................
+
+Once the migration completes (**Migrated Data Size** should match **Data Size**), Xtract can perform a cutover operation to automatically shutdown the source VM and power on the migrated VM.
+
+In **Xtract**, click **Migration In Progress** Status for your Migration Plan.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm19.png
 
-Select the box for **ViewImage-Team-XX**, and click **Cutover**.
+Select **ViewImage-Team-XX** and click **Cutover**.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm20.png
 
@@ -166,17 +177,19 @@ Click **Continue**.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm21.png
 
-After it is completed you can view it in Prism
+After the Cutover is completed you can launch Prism directly from Xtract to manage your migrated VM.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm22.png
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm23.png
 
 Takeaways
-+++++++++++
++++++++++
 
 - Xtract for VMs simplifies bulk migration of existing VMs to Nutanix, eliminating the friction associated with onboarding new IT infrastructure.
 
 - Businesses can quickly leverage the full potential of Nutanix Enterprise Cloud with near-zero VM downtime during the migration from vSphere ESXi to Nutanix AHV.
 
 - Xtract features the ability to migrate all AHV certified OSes, scheduling data-seeding and migrations, multi-cluster migration management, and grouping/sorting VMs.
+
+- Xtract is capable of maintaining MAC addresses and static IPs for migrated VMs.
