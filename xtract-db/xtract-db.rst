@@ -46,7 +46,7 @@ Fill out the following fields and click **Save**:
   - **IP Address** - *10.21.XX.43*
   - Select **Add**
 
-Select the **Xtract-VM** VM and click **Actions > Power on**.
+Select the **Xtract-DB** VM and click **Actions > Power on**.
 
 Open \https://<*XTRACT-DB-VM-IP*>/ in a browser to access **Xtract for DBs**.
 
@@ -175,6 +175,8 @@ Log in and run Windows Update. Set Windows Updates to **Check for updates but le
   Microsoft SQL Server 2016 requires `KB2919355 <https://www.microsoft.com/en-us/download/details.aspx?id=42334>`_ to install correctly.
 
 Disable the Windows Firewall Service.
+
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb39.png
 
 Shutdown the VM.
 
